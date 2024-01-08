@@ -142,7 +142,7 @@ function removeFirstOccurrences(str, substr) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  return str.replace('<', '').replace('>', '');
+  return str.slice(1, -1);
 }
 
 
@@ -203,7 +203,7 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(/* width, height */) {
-  throw new Error('Not implemented');
+  // return 'asda';
 }
 
 
@@ -240,8 +240,8 @@ function encodeToRot13(/* str */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  return typeof (value) === 'string' || value instanceof String;
 }
 
 
